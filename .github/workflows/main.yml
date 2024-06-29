@@ -1,7 +1,6 @@
 name: Angular-CI
 
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
     branches: [ "main" ]
   pull_request:
@@ -9,33 +8,29 @@ on:
 
 permissions: write-all
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
     runs-on: ubuntu-latest
 
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: CheckOut
         uses: actions/checkout@v4
 
-      # Configuracion Node.js
+      - name: List files for debugging
+        run: ls -la
+
       - name: Setup Node.js environment
         uses: actions/setup-node@v4.0.2
         with:
           node-version: "20.12.2"
 
-      # Instalación de dependencias
-      - name: Instala dependencias
-        run:  npm i
+      - name: Install dependencies
+        run: npm install
 
-      # Despliegue de la aplicación
       - name: Build
-        run:  npm run build:prod
+        run: npm run build:prod
 
-        # Deploy GitHub Pages
-      - name: GitHub Pages
+      - name: Deploy GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4.0.0
         with:
           build_dir: dist/caoo-examen/browser
