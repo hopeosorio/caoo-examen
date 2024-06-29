@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:caoo-examen": "node dist/caoo-examen/server/server.mjs"
+    "serve:ssr:caoo-examen": "node dist/caoo-examen/server/server.mjs",
+    "build:prod": "ng build --configuration production --base-href /gbr_shop/"
   },
   "private": true,
   "dependencies": {
