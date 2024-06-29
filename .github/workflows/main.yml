@@ -33,7 +33,7 @@ jobs:
       - name: Deploy GitHub Pages
         uses: crazy-max/ghaction-github-pages@v4.0.0
         with:
-          build_dir: dist/caoo-examen/browser
+          build_dir: funcionalidad/caoo-examen
           target_branch: gh-pages
         env:
           GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
