@@ -1,3 +1,3 @@
-"# Bienvenidos recuperaci¢n## Soy Cesar Alejandro Ordo¤ez Osorio"   
+# Bienvenidos recuperaci¢n## Soy Cesar Alejandro Ordo¤ez Osorio   
 ###titulo
 ---
